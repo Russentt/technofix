@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./variables";
+@import "bootstrap/scss/bootstrap";
+
+.image-profile {
+  object-fit: cover;
+}
+
+main {
+  background-color: var(--bs-secondary);
+  font-family: "Montserrat", sans-serif;
+}
+
+.masthead {
+  background-size: contain;
+  background-image: url("../bg4.jpg");
+}
+
+.overlay {
+  backdrop-filter: blur(2.5px) brightness(75%);
+}
+
+.navbar-nav .nav-link {
+  color: var(--bs-white);
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: var(--bs-danger);
+  }
+  &:active {
+    color: var(--bs-secondary);
+  }
+}
+
+.nav .nav-item .nav-link {
+  color: var(--bs-info);
+}
+
+p.m-2:nth-child(7) {
+  color: var(--bs-white);
+  transition: color 0.35s ease-in;
+  &:hover {
+    color: var(--bs-danger);
+  }
+}
