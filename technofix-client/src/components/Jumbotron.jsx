@@ -2,7 +2,7 @@ import React from "react";
 
 export const Jumbotron = () => {
   return (
-    <div class="jumbotron text-center jumbotron-fluid">
+    <div className="jumbotron text-center jumbotron-fluid">
       <div className="container bg-primary bg-opacity-50">
         <h1 className="display-2 m-0 p-3 fw-bolder text-success text-capitalize">Technofix</h1>
         <h2 className="display-8 m-0 p-2 fw-bolder text-danger -text-capitalize">Tecnología en buenas manos</h2>
@@ -14,7 +14,7 @@ export const Jumbotron = () => {
           rendimiento de tus dispositivos con un servicio técnico confiable,
           rápido y adaptado a tus necesidades.
         </p>
-        <hr class="my-4"></hr>
+        <hr className="my-4"></hr>
         <div className="nav-overflow">
           <ul className="nav gap-3 justify-content-center nav-pills">
             <li className="nav-item">
@@ -28,13 +28,13 @@ export const Jumbotron = () => {
             </li>
           </ul>
         </div>
-        <hr class="my-4"></hr>
+        <hr className="my-4"></hr>
         <p className="m-2 fs-3">Quieres saber mas? Comunicate con nosotros!</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-center p-2">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+        <div className="d-grid gap-2 d-md-flex justify-content-center p-2">
+          <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">
             Solicitar servicio técnico
           </button>
-          <button type="button" class="btn btn-secondary btn-lg px-4 me-md-2">
+          <button type="button" className="btn btn-secondary btn-lg px-4 me-md-2">
             Conocer nuestros servicios
           </button>
         </div>

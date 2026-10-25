@@ -3,7 +3,7 @@ import { Card } from "./Card";
 import { seed_trabajadores } from "/home/beck/technofix/technofix-client/src/data/trabajadores.js";
 
 export const Cards = () => {
-  const devs = seed_trabajadores['desarrolladores'];
+  const devs = seed_trabajadores["desarrolladores"];
 
   const developers = devs.map((dev) => (
     <Card
@@ -15,19 +15,21 @@ export const Cards = () => {
   ));
 
   return (
-    <section class="py-5">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-2 mb-lg-4">
-          <div class="col-12 col-lg-8 col-xxl-7 text-center mx-auto">
-            <span class="text-white fs-4">Nuestros expertos</span>
-            <h2 class="display-5 fw-bold">Conoce al equipo</h2>
-            <p class="lead text-white">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta
-              harum ipsum venenatis metus sem veniam eveniet aperiam suscipit.
+    <section className="py-5">
+      <div className="container">
+        <div className="row justify-content-center text-center mb-2 mb-lg-4">
+          <div className="col-12 col-lg-8 col-xxl-7 text-center mx-auto">
+            <span className="text-white fs-4">Nuestros expertos</span>
+            <h2 className="display-5 fw-bold">Conoce al equipo</h2>
+            <p className="lead text-white">
+              Comprometidos con la tecnología y la solución de problemas,
+              nuestros especialistas trabajan en conjunto para ofrecer un
+              servicio técnico confiable, eficiente y adaptado a las necesidades
+              de cada cliente.
             </p>
           </div>
         </div>
-        <div class="row">{developers}</div>
+        <div className="row">{developers}</div>
       </div>
     </section>
   );

@@ -1,23 +1,19 @@
 import { Navbar } from "./components/Navbar";
 import { Jumbotron } from "./components/Jumbotron";
 import { Cards } from "./components/Cards";
-import { Hero } from "./components/Hero";
+
+import { BrowserRouter, Routes, Route } from "react-router";
+import Admin from "./pages/Admin";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <>
-      <header>
-        <Navbar></Navbar>
-      </header>
-      <main>
-        <div className="masthead">
-          <div className="overlay">
-            <Jumbotron></Jumbotron>
-          </div>
-        </div>
-        <Cards></Cards>
-      </main>
-    </>
+    <BrowserRouter basename="technofix">
+      <Routes>
+        <Route path="/admin" element={<Admin />}></Route>
+        <Route path="/" element={<Homepage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
