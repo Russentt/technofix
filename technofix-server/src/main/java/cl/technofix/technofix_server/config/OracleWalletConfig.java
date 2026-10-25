@@ -57,6 +57,20 @@ public class OracleWalletConfig implements BeanFactoryPostProcessor {
             String walletPath = actualWalletRoot.toAbsolutePath().toString().replace("\\", "/");
             System.setProperty("wallet.path", walletPath);
             System.setProperty("oracle.net.tns_admin", walletPath);
+            String envPass = System.getenv("DB_PASSWORD");
+            System.out.println("=== RENDER AUTH DEBUG ===");
+            System.out.println("DB_PASSWORD env var exists? " + (envPass != null));
+            if (envPass != null) {
+                System.out.println("DB_PASSWORD length: " + envPass.length());
+                System.out.println("First char: '" + envPass.charAt(0) + "' | Last char: '"
+                        + envPass.charAt(envPass.length() - 1) + "'");
+            }
+            Path tnsFile = Path.of(walletPath, "tnsnames.ora");
+            if (Files.exists(tnsFile)) {
+                String tnsContent = Files.readString(tnsFile);
+                System.out.println("TNS Entry: " + tnsContent.lines().findFirst().orElse("empty"));
+            }
+            System.out.println("=========================");
             System.out.println("Oracle Wallet extracted successfully to: " + walletPath);
 
         } catch (Exception e) {
