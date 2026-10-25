@@ -35,8 +35,6 @@ build/
 ### Conexion BD. ###
 
 src/main/resources/wallet
-src/main/resources/wallet.zip
-src/main/resources/wallet_encrypted.txt
 *.p12
 *.sso
 *.ora

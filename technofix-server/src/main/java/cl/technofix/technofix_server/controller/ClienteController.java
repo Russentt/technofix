@@ -18,7 +18,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<?> findAll() {
         return ResponseEntity.ok(clienteService.findAll());
     }
